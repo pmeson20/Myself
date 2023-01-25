@@ -1,0 +1,40 @@
+import random 
+
+#Input Data
+input_data = ['rock', 'paper', 'scissors']
+
+
+program_running = True
+
+while program_running: 
+    #When we start a new game, we reset the player's choice, and the Computer will choose randomly again
+    player = None 
+    computer = random.choice(list(input_data)) #Select a random option within the list 
+
+    while player not in input_data:
+        player = input("Enter a choice (Rock, Paper or Scissors): ") #Ask User for Input 
+
+
+    print("Player's Choice: " + player) #Print Player's choice 
+    print("Computer's Choice: " + computer) #Print the random choice 
+
+    if player == computer: 
+        print("It's a tie!")
+
+    elif player == 'rock' and computer == "scissors":
+        print("You have won!") 
+    
+    elif player == 'paper' and computer == "rock":
+        print("You have won!")
+
+    elif player == "scissors" and computer == "paper":
+        print("You have won!") 
+    
+    else: 
+        print("You lost!")
+    
+    #If we want to stop playing...
+    if not input("Play again?").lower() == "y": 
+        program_running = False
+        
+print("Thank you. Good bye!")
