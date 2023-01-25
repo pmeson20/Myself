@@ -12,7 +12,7 @@ while program_running:
     computer = random.choice(list(input_data)) #Select a random option within the list 
 
     while player not in input_data:
-        player = input("Enter a choice (Rock, Paper or Scissors): ") #Ask User for Input 
+        player = input("Enter a choice (rock, paper or scissors): ") #Ask User for Input 
 
 
     print("Player's Choice: " + player) #Print Player's choice 
